@@ -67,6 +67,13 @@
           </a>
         </li>
       </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -175,24 +182,19 @@
       </ol>
       <div class="row">
         <div class="col-12">
-          <h1>Running dedupe...</h1>
+          <h1 style="color: red">Search Failed</h1>
         </div>
           <div style="margin-left: 10px" class="card mb-3">
             <div class="card-header">
-              <i class="fa"></i> Address found with dedupe:
+              <i class="fa"></i> No Matching Address
             </div>
             <div class="card-body">
-                  {{response_dedupe}}
+                  Try refining your search!
             </div>
-            <div class="card-footer small text-muted">Is this the address you are looking for?
-                <div class="nav-item" data-toggle="tooltip">
-                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
-                        <span class="Nav-link-text">Yes</span>
-                    </a>
-                    <a style="display: inline-block" class="nav-link" href="failure.html">
-                        <span class="Nav-link-text">No</span>
-                    </a>
-                </div>
+            <div class="card-footer small text-muted">
+                <a style="display: inline-block" class="nav-link" href="search.html">
+                        <span class="Nav-link-text">Search Again</span>
+                </a>
             </div>
         </div>
             </div>
@@ -236,6 +238,7 @@
     <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="static/js/sb-admin.min.js"></script>
+  </div>
 </body>
 
 </html>
