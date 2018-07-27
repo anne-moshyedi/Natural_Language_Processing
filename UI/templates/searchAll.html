@@ -189,16 +189,27 @@
               <i class="fa"></i> Address found:
             </div>
             <div class="card-body">
-                <p>Pysolr: {{response_pysolr}}</p>
-                <p>SoDA: {{response_soda}}</p>
-                <p>Dedupe: {{response_dedupe}}</p>
-            </div>
-            <div class="card-footer small text-muted">Is this the address you are looking for?
-                <div class="nav-item" data-toggle="tooltip">
-                    <a style="display: inline-block" class="nav-link" href="success.html">
+                <p style="display: inline-block">Pysolr: {{response_pysolr}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='pysolr') }}">
                         <span class="Nav-link-text">Yes</span>
                     </a>
-                    <a style="display: inline-block" class="nav-link" href="SODAUI.html">
+                </p>
+                <br/>
+                <p style="display: inline-block">SoDA: {{response_soda}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='SoDA') }}">
+                        <span class="Nav-link-text">Yes</span>
+                    </a>
+                </p>
+                <br/>
+                <p style="display: inline-block">Dedupe: {{response_dedupe}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
+                        <span class="Nav-link-text">Yes</span>
+                    </a>
+                </p>
+            </div>
+            <div class="card-footer small text-muted">Don't see the address you are looking for?
+                <div class="nav-item" data-toggle="tooltip">
+                    <a style="display: inline-block" class="nav-link" href="failure.html">
                         <span class="Nav-link-text">No</span>
                     </a>
                 </div>
