@@ -201,6 +201,12 @@
                     </a>
                 </p>
                 <br/>
+                <p style="display: inline-block">Record Linkage: {{response_rl}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='rl') }}">
+                        <span class="Nav-link-text">Yes</span>
+                    </a>
+                </p>
+                <br/>
                 <p style="display: inline-block">Dedupe: {{response_dedupe}}
                     <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
                         <span class="Nav-link-text">Yes</span>
