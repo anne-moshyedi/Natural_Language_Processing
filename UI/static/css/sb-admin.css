@@ -476,3 +476,13 @@ footer.sticky-footer {
     width: calc(100% - 55px);
   }
 }
+
+.logo{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin: auto;
+}

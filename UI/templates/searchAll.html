@@ -67,6 +67,13 @@
           </a>
         </li>
       </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle mr-lg-2" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -175,27 +182,45 @@
       </ol>
       <div class="row">
         <div class="col-12">
-          <h1>Running dedupe...</h1>
+          <h1>Running all methods...</h1>
         </div>
-          <div style="margin-left: 10px" class="card mb-3">
+        <div style="margin-left: 10px" class="card mb-3">
             <div class="card-header">
-              <i class="fa"></i> Address found with dedupe:
+              <i class="fa"></i> Address found:
             </div>
             <div class="card-body">
-                  {{response_dedupe}}
-            </div>
-            <div class="card-footer small text-muted">Is this the address you are looking for?
-                <div class="nav-item" data-toggle="tooltip">
+                <p style="display: inline-block">Pysolr: {{response_pysolr}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='pysolr') }}">
+                        <span class="Nav-link-text">Yes</span>
+                    </a>
+                </p>
+                <br/>
+                <p style="display: inline-block">SoDA: {{response_soda}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='SoDA') }}">
+                        <span class="Nav-link-text">Yes</span>
+                    </a>
+                </p>
+                <br/>
+                <p style="display: inline-block">Record Linkage: {{response_rl}}
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='rl') }}">
+                        <span class="Nav-link-text">Yes</span>
+                    </a>
+                </p>
+                <br/>
+                <p style="display: inline-block">Dedupe: {{response_dedupe}}
                     <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
                         <span class="Nav-link-text">Yes</span>
                     </a>
+                </p>
+            </div>
+            <div class="card-footer small text-muted">Don't see the address you are looking for?
+                <div class="nav-item" data-toggle="tooltip">
                     <a style="display: inline-block" class="nav-link" href="failure.html">
                         <span class="Nav-link-text">No</span>
                     </a>
                 </div>
             </div>
         </div>
-            </div>
       </div>
     </div>
     <!-- /.container-fluid-->
@@ -236,6 +261,7 @@
     <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="static/js/sb-admin.min.js"></script>
+  </div>
 </body>
 
 </html>

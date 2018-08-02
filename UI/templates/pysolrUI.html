@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>NLP Platform</title>
+  <title>Deep NLP</title>
   <!-- Bootstrap core CSS-->
   <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom fonts for this template-->
@@ -175,27 +175,26 @@
       </ol>
       <div class="row">
         <div class="col-12">
-          <h1>Running dedupe...</h1>
+          <h1>Running Pysolr...</h1>
         </div>
-          <div style="margin-left: 10px" class="card mb-3">
+        <div style="margin-left: 10px" class="card mb-3">
             <div class="card-header">
-              <i class="fa"></i> Address found with dedupe:
+              <i class="fa"></i> Address found with Pysolr:
             </div>
             <div class="card-body">
-                  {{response_dedupe}}
+                  {{response_pysolr}}
             </div>
             <div class="card-footer small text-muted">Is this the address you are looking for?
                 <div class="nav-item" data-toggle="tooltip">
-                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
+                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='pysolr') }}">
                         <span class="Nav-link-text">Yes</span>
                     </a>
-                    <a style="display: inline-block" class="nav-link" href="failure.html">
+                    <a style="display: inline-block" class="nav-link" href="SODAUI.html">
                         <span class="Nav-link-text">No</span>
                     </a>
                 </div>
             </div>
         </div>
-            </div>
       </div>
     </div>
     <!-- /.container-fluid-->
@@ -236,6 +235,7 @@
     <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="static/js/sb-admin.min.js"></script>
+  </div>
 </body>
 
 </html>

@@ -175,27 +175,56 @@
       </ol>
       <div class="row">
         <div class="col-12">
-          <h1>Running dedupe...</h1>
-        </div>
-          <div style="margin-left: 10px" class="card mb-3">
-            <div class="card-header">
-              <i class="fa"></i> Address found with dedupe:
-            </div>
-            <div class="card-body">
-                  {{response_dedupe}}
-            </div>
-            <div class="card-footer small text-muted">Is this the address you are looking for?
-                <div class="nav-item" data-toggle="tooltip">
-                    <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
-                        <span class="Nav-link-text">Yes</span>
-                    </a>
-                    <a style="display: inline-block" class="nav-link" href="failure.html">
-                        <span class="Nav-link-text">No</span>
-                    </a>
+          <h1>Search the Dataset</h1>
+            
+<!--
+            <form action='/upload.html' method=post>
+                <div class="form-group">
+                    <label>File input</label>
+                    <input type="file" name="fileinput">
                 </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+-->
+<!--
+            <form name='fileinput' method=post enctype=multipart/form-data>
+              <div>
+                <p>Upload Data Here:</p>
+                <p><input id="upload_button" type="file" class="btn btn-default btn-xs" name="file"></p>
+                <p><input id="upload_button" type="file" class="btn btn-default btn-xs" name="file2"></p>
+                <p><input id="submit_button" type="submit" class="btn btn-success" value="Upload">
+              </div>
+            </form>
+-->
+        <form method="post">
+          <div class="form-group">
+            <label for="exampleInputName1">Company Name</label>
+            <input name="name"class="form-control" id="exampleInputName1" aria-describedby="nameHelp" placeholder="Enter Company Name">
+            <label for="exampleInputStreetAddress1">Address</label>
+            <input name="addr"class="form-control" id="exampleInputStreetAddress1" aria-describedby="addrHelp" placeholder="Enter Street Address">
+            <label for="exampleInputCity1">City</label>
+            <input name="city"class="form-control" id="exampleInputStreetCity1" aria-describedby="cityHelp" placeholder="Enter City Name">
+            <label for="exampleInputCtry1">Country</label>
+            <input name="ctry"class="form-control" id="exampleInputCtry1" aria-describedby="ctryHelp" placeholder="Enter Country">
+            <label for="exampleInputCode1">Zip Code</label>
+            <input name="code"class="form-control" id="exampleInputCode1" aria-describedby="codeHelp" placeholder="Enter Zip Code">
+            <button style="margin-top: 10px" formaction="/searchAll.html" type="submit" class="btn btn-primary">Search with all methods</button>
+            <button style="margin-top: 10px" formaction="/pysolrUI.html" type="submit" class="btn btn-primary">Search in steps</button>
+          </div>
+          </form>
+<!--
+            <div class="nav-item" data-toggle="tooltip">
+                <a class="nav-link" href="pysolrUI.html">
+                    <span class="Nav-link-text">Step by step search</span>
+                </a>
             </div>
+            <div class="nav-item" data-toggle="tooltip">
+                <a class="nav-link" href="searchAll.html">
+                    <span class="Nav-link-text">Search all at once</span>
+                </a>
+            </div>
+-->
         </div>
-            </div>
       </div>
     </div>
     <!-- /.container-fluid-->
@@ -236,6 +265,7 @@
     <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="static/js/sb-admin.min.js"></script>
+  </div>
 </body>
 
 </html>
