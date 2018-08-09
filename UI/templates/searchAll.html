@@ -189,13 +189,13 @@
               <i class="fa"></i> Address found:
             </div>
             <div class="card-body">
-                <p style="display: inline-block">Pysolr: {{response_pysolr}}
+                <p style="display: inline-block">Index-Based Search: {{response_pysolr}}
                     <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='pysolr') }}">
                         <span class="Nav-link-text">Yes</span>
                     </a>
                 </p>
                 <br/>
-                <p style="display: inline-block">SoDA: {{response_soda}}
+                <p style="display: inline-block">Dictionary Annotator: {{response_soda}}
                     <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='SoDA') }}">
                         <span class="Nav-link-text">Yes</span>
                     </a>
@@ -207,7 +207,7 @@
                     </a>
                 </p>
                 <br/>
-                <p style="display: inline-block">Dedupe: {{response_dedupe}}
+                <p style="display: inline-block">ML Model: {{response_dedupe}}
                     <a style="display: inline-block" class="nav-link" href="{{ url_for('success', method='dedupe') }}">
                         <span class="Nav-link-text">Yes</span>
                     </a>
@@ -221,10 +221,64 @@
                 </div>
             </div>
         </div>
+        <div class="card mb-3" style="margin-left: 10px">
+            <div class="card-header">
+                <i class="fa fa-table"></i> Timing of Operations
+            </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Time Taken (in ms)</th>                                 
+                    </tr>
+                </thead> 
+                <tbody>
+                    <tr>
+                        <td>Index-Based Search</td>
+                        <td>{{time_pysolr}}</td>
+                    </tr>
+                    <tr>
+                        <td>Dictionary Annotator</td>
+                        <td>{{time_soda}}</td>
+                    </tr>
+                        <td>Record Linkage</td>
+                        <td>{{time_rl}}</td>
+                    <tr>
+                        <td>ML Model</td>
+                        <td>{{time_dedupe}}</td>
+                    </tr>
+                    <tr>
+                        <td>Total Time</td>
+                        <td>{{time_total}}</td>
+                    </tr>
+                </tbody>
+              </table>
+        </div>
+<!--
+         <div class="card-body">
+              <canvas id="myBarChart" width="100" height="50"></canvas>
+        </div>   
+-->
       </div>
     </div>
+<!--
+        <div class="col-lg-8">
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i> Bar Chart Example</div>
+            <div class="card-body">
+              <canvas id="myBarChart" width="100" height="50"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+        </div>
+-->
     <!-- /.container-fluid-->
     <!-- /.content-wrapper-->
+        </div>
+      </div>
     <footer class="sticky-footer">
       <div class="container">
         <div class="text-center">
@@ -261,6 +315,11 @@
     <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom scripts for all pages-->
     <script src="static/js/sb-admin.min.js"></script>
+    <!-- Custom scripts for this page-->
+    <script src="static/js/sb-admin-charts.js"></script>
+      
+    <!-- Page level plugin JavaScript-->
+    <script src="static/vendor/chart.js/Chart.min.js"></script>
   </div>
 </body>
 
