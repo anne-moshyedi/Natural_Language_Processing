@@ -8,7 +8,7 @@ The specific use case that is explored deals with matching a user entry, in this
 ## Workflow
 This approach uses four stages. 
 
-https://github.com/anne-moshyedi/SWIFT/issues/3#issue-349197941
+<img width="936" alt="screen shot 2018-08-09 at 12 10 45 pm" src="https://user-images.githubusercontent.com/34118178/43911818-74d6e0c0-9bce-11e8-979e-6478f972b55a.png">
 
 ### Step 1: Input
 The first is collecting the user input. This input consists of a clean gold copy of all of the addresses that will be queried and the user-entered adress. These user entered addresses can be exact matches, or they may contain ambiguities, missing values, incorrect fields, improper formatting, abbreviations, truncations, and more.
