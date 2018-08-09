@@ -23,3 +23,25 @@ The final step is to provide the user the results from each of the methods. Here
 This diagram illustrates some of the differences between each method. It is important to note that the ML model is left blank because of the uniqueness of ML. It does not have a predetermined set of rules for discovering matches. As more data and edge cases are obtained, the matches that are discovered changes, and the accuracy of the model improves.
 
 <img width="887" alt="screen shot 2018-08-09 at 12 23 24 pm" src="https://user-images.githubusercontent.com/34118178/43912331-e87a0eb6-9bcf-11e8-8625-7a69de35d27a.png">
+
+## Installation Instructions
+Follow the instructions below to get this running on your local host.
+
+### 1. Download Solr and SoDA
+Go here for instructions on how to download SoDA https://github.com/elsevierlabs-os/soda/blob/master/docs/installation.md. This will include a Solr download. When downloading and starting solr, specify the port to be 8984. This can be done with the following command: bin/solr start -p 8984. Also, make sure that the SoDA port being used is 8080. This is the default.
+
+To upload the data to SoDA, 'cd' into the the SoDA directory, which should be located within a SolrTextTagger folder. From here, type 'sbt'. Within sbt, add the 6 lexicons with the following commands. The paths can be located in .../SWIFT-annie/SoDA/
+
+run companies_name {path_to companies_name1.tsv} 1
+run companies_addr {path_to companies_addr1.tsv} 1
+run companies_city {path_to companies_city1.tsv} 1
+run companies_ctry {path_to companies_ctry1.tsv} 1
+run companies_code {path_to companies_code1.tsv} 1
+run companies_dict {path_to companies_dict.tsv} 1
+
+Check to make sure the files were uploading by running the jupyter notebook- "DICTIONARY ANNOTATOR.ipynb" in the SoDA folder.
+
+### 2. Configure Solr Index
+Navigate to http://localhost:8984/solr/. This should be up and running if the Solr installation worked in the previous step. From here, create a core called "new_core" within that admin site. If you run into any problems here, try creating the core via commandline, using the command "bin/solr create -c new_core". This reference can be used for more help https://lucene.apache.org/solr/guide/6_6/solr-cores-and-solr-xml.html. 
+
+In order to upload the data and run this index-based fast lookup method, navigate to and run the "INDEX-BASED.ipynb" file in the Preliminary folder.
