@@ -32,12 +32,12 @@ Go here for instructions on how to download SoDA https://github.com/elsevierlabs
 
 To upload the data to SoDA, 'cd' into the the SoDA directory, which should be located within a SolrTextTagger folder. From here, type 'sbt'. Within sbt, add the 6 lexicons with the following commands. The paths can be located in .../SWIFT-annie/SoDA/
 
-run companies_name {path_to companies_name1.tsv} 1
-run companies_addr {path_to companies_addr1.tsv} 1
-run companies_city {path_to companies_city1.tsv} 1
-run companies_ctry {path_to companies_ctry1.tsv} 1
-run companies_code {path_to companies_code1.tsv} 1
-run companies_dict {path_to companies_dict.tsv} 1
+run companies_name {path_to companies_name1.tsv} 1 <br/>
+run companies_addr {path_to companies_addr1.tsv} 1 <br/>
+run companies_city {path_to companies_city1.tsv} 1 <br/>
+run companies_ctry {path_to companies_ctry1.tsv} 1 <br/>
+run companies_code {path_to companies_code1.tsv} 1 <br/>
+run companies_dict {path_to companies_dict.tsv} 1 <br/>
 
 Check to make sure the files were uploading by running the jupyter notebook- "DICTIONARY ANNOTATOR.ipynb" in the SoDA folder.
 
