@@ -21,3 +21,4 @@ The final step is to provide the user the results from each of the methods. Here
 
 ## Comparing the Results
 This diagram illustrates some of the differences between each method. It is important to note that the ML model is left blank because of the uniqueness of ML. It does not have a predetermined set of rules for discovering matches. As more data and edge cases are obtained, the matches that are discovered changes, and the accuracy of the model improves.
+<img width="887" alt="screen shot 2018-08-09 at 12 23 24 pm" src="https://user-images.githubusercontent.com/34118178/43912331-e87a0eb6-9bcf-11e8-8625-7a69de35d27a.png">
