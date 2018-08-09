@@ -7,6 +7,9 @@ This document provides a brief overview of the project. Further documentation ca
 The specific use case that is explored deals with matching a user entry, in this case a bank or company address, against an extensive dictionary that contains all of the possible exact addresses. 
 ## Workflow
 This approach uses four stages. 
+
+https://github.com/anne-moshyedi/SWIFT/issues/3#issue-349197941
+
 ### Step 1: Input
 The first is collecting the user input. This input consists of a clean gold copy of all of the addresses that will be queried and the user-entered adress. These user entered addresses can be exact matches, or they may contain ambiguities, missing values, incorrect fields, improper formatting, abbreviations, truncations, and more.
 ### Step 2: Preliminary Matching
