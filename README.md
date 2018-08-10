@@ -51,3 +51,6 @@ Check to make sure the files were uploading by running the jupyter notebook- "DI
 Navigate to http://localhost:8984/solr/. This should be up and running if the Solr installation worked in the previous step. From here, create a core called "new_core" within that admin site. If you run into any problems here, try creating the core via commandline, using the command "bin/solr create -c new_core". This reference can be used for more help https://lucene.apache.org/solr/guide/6_6/solr-cores-and-solr-xml.html. 
 
 In order to upload the data and run this index-based fast lookup method, navigate to and run the "INDEX-BASED.ipynb" file in the Preliminary folder.
+
+### 5. Other setup
+There are many Python packages imported in the Jupyter Notebooks. If these are giving you errors, make sure to install them.
