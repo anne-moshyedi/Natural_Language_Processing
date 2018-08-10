@@ -27,7 +27,13 @@ This diagram illustrates some of the differences between each method. It is impo
 ## Installation Instructions
 Follow the instructions below to get this running on your local host.
 
-### 1. Download Solr and SoDA
+### 1. Download Python
+If you don't already have Python running, download version 3.6.
+
+### 2. Download Anaconda
+Make sure that you have Anaconda3 which should install Jupyter Notebook 5.0.0 and will allow you to run the ipynb files.
+
+### 3. Download Solr and SoDA
 Go here for instructions on how to download SoDA https://github.com/elsevierlabs-os/soda/blob/master/docs/installation.md. This will include a Solr download. When downloading and starting solr, specify the port to be 8984. This can be done with the following command: bin/solr start -p 8984. Also, make sure that the SoDA port being used is 8080. This is the default.
 
 To upload the data to SoDA, 'cd' into the the SoDA directory, which should be located within a SolrTextTagger folder. From here, type 'sbt'. Within sbt, add the 6 lexicons with the following commands. The paths can be located in .../SWIFT-annie/SoDA/
@@ -41,7 +47,7 @@ run companies_dict {path_to companies_dict.tsv} 1 <br/>
 
 Check to make sure the files were uploading by running the jupyter notebook- "DICTIONARY ANNOTATOR.ipynb" in the SoDA folder.
 
-### 2. Configure Solr Index
+### 4. Configure Solr Index
 Navigate to http://localhost:8984/solr/. This should be up and running if the Solr installation worked in the previous step. From here, create a core called "new_core" within that admin site. If you run into any problems here, try creating the core via commandline, using the command "bin/solr create -c new_core". This reference can be used for more help https://lucene.apache.org/solr/guide/6_6/solr-cores-and-solr-xml.html. 
 
 In order to upload the data and run this index-based fast lookup method, navigate to and run the "INDEX-BASED.ipynb" file in the Preliminary folder.
