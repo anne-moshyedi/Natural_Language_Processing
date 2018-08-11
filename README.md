@@ -64,8 +64,8 @@ In order to upload the data and run this index-based fast lookup method, navigat
 There are many Python packages imported in the Jupyter Notebooks. If these are giving you errors, make sure to install them.
 
 ## Resources
-http://lucene.apache.org/solr/guide/7_3/
-https://github.com/elsevierlabs-os/soda
-https://github.com/OpenSextant/SolrTextTagger
-https://dedupe.io/
+http://lucene.apache.org/solr/guide/7_3/ <br/>
+https://github.com/elsevierlabs-os/soda <br/>
+https://github.com/OpenSextant/SolrTextTagger <br/>
+https://dedupe.io/ <br/>
 http://flask.pocoo.org/docs/1.0/
