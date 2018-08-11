@@ -3,6 +3,8 @@ This is a project completed by Taylor Kramer and Anne Moshyedi. It focuses on ge
 
 This document provides a brief overview of the project. Further documentation can be found in academic paper that will be available soon.
 
+This code was created for use at SWIFT.
+
 ## Use Case
 The specific use case that is explored deals with matching a user entry, in this case a bank or company address, against an extensive dictionary that contains all of the possible exact addresses. 
 ## Workflow
@@ -68,4 +70,5 @@ http://lucene.apache.org/solr/guide/7_3/ <br/>
 https://github.com/elsevierlabs-os/soda <br/>
 https://github.com/OpenSextant/SolrTextTagger <br/>
 https://dedupe.io/ <br/>
-http://flask.pocoo.org/docs/1.0/
+http://flask.pocoo.org/docs/1.0/ <br/>
+More help and inspiration came from experts within SWIFT.
