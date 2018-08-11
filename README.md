@@ -24,7 +24,7 @@ This diagram illustrates some of the differences between each method. It is impo
 
 <img width="887" alt="screen shot 2018-08-09 at 12 23 24 pm" src="https://user-images.githubusercontent.com/34118178/43912331-e87a0eb6-9bcf-11e8-8625-7a69de35d27a.png">
 
-## Where are the notebooks??
+## Where are the notebooks?
 There are 5 notebooks that you may want to run. <br/>
 1. INDEX_BASED.ipynb is located in the Preliminary folder <br/>
 2. DICTIONARY_ANNOTATOR.ipynb is located in the DictionaryAnnotator folder <br/>
