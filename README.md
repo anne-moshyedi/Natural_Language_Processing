@@ -24,6 +24,14 @@ This diagram illustrates some of the differences between each method. It is impo
 
 <img width="887" alt="screen shot 2018-08-09 at 12 23 24 pm" src="https://user-images.githubusercontent.com/34118178/43912331-e87a0eb6-9bcf-11e8-8625-7a69de35d27a.png">
 
+## Where are the notebooks??
+There are 5 notebooks that you may want to run. <br/>
+1. INDEX_BASED.ipynb is located in the Preliminary folder <br/>
+2. DICTIONARY_ANNOTATOR.ipynb is located in the DictionaryAnnotator folder <br/>
+3. RECORD_LINKAGE.ipynb is located in the RecordLinkage folder <br/>
+4. ML_Model.ipynb is located in the UI folder <br/>
+5. NLP_PLATFORM.ipynb is located in the UI folder <br/>
+
 ## Installation Instructions
 Follow the instructions below to get this running on your local host.
 
@@ -45,12 +53,19 @@ run companies_ctry {path_to companies_ctry1.tsv} 1 <br/>
 run companies_code {path_to companies_code1.tsv} 1 <br/>
 run companies_dict {path_to companies_dict.tsv} 1 <br/>
 
-Check to make sure the files were uploading by running the jupyter notebook- "DICTIONARY ANNOTATOR.ipynb" in the SoDA folder.
+Check to make sure the files were uploading by running the jupyter notebook- "DICTIONARY_ANNOTATOR.ipynb" in the DictionaryAnnotator folder.
 
-### 4. Configure Solr Index
+### 4. Configure Solr 
 Navigate to http://localhost:8984/solr/. This should be up and running if the Solr installation worked in the previous step. From here, create a core called "new_core" within that admin site. If you run into any problems here, try creating the core via commandline, using the command "bin/solr create -c new_core". This reference can be used for more help https://lucene.apache.org/solr/guide/6_6/solr-cores-and-solr-xml.html. 
 
 In order to upload the data and run this index-based fast lookup method, navigate to and run the "INDEX-BASED.ipynb" file in the Preliminary folder.
 
 ### 5. Other setup
 There are many Python packages imported in the Jupyter Notebooks. If these are giving you errors, make sure to install them.
+
+## Resources
+http://lucene.apache.org/solr/guide/7_3/
+https://github.com/elsevierlabs-os/soda
+https://github.com/OpenSextant/SolrTextTagger
+https://dedupe.io/
+http://flask.pocoo.org/docs/1.0/
