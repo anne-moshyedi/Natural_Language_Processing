@@ -34,6 +34,8 @@ There are 5 notebooks that you may want to run. <br/>
 4. ML_Model.ipynb is located in the UI folder <br/>
 5. NLP_PLATFORM.ipynb is located in the UI folder <br/>
 
+A demonstration of the UI, example queries, and a visual implementation of the dictionary annotator within an AWS Cloud environment can be found in Entity_Resolution.pdf
+
 ## Installation Instructions
 Follow the instructions below to get this running on your local host.
 
@@ -72,4 +74,4 @@ https://github.com/OpenSextant/SolrTextTagger <br/>
 https://dedupe.io/ <br/>
 http://flask.pocoo.org/docs/1.0/ <br/>
 https://getbootstrap.com/ <br/>
-More help and inspiration came from experts within SWIFT.
+More help and inspiration came from experts within SWIFT
