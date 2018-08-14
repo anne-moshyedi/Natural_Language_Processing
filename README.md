@@ -1,9 +1,7 @@
 # NLP- Entity Resolution
-This is a project completed by Taylor Kramer and Anne Moshyedi. It focuses on generating a solution to a problem called Entity Resolution that lies within the scope of Natural Language Processing. Entity Resolution deals with disambiguating entities across, or within, datasets, in order to consolidate and strengthen the integrity of the data.
+This project focuses on generating a solution to a problem called Entity Resolution that lies within the scope of Natural Language Processing. Entity Resolution deals with disambiguating entities across, or within, datasets, in order to consolidate and strengthen the integrity of the data.
 
 This document provides a brief overview of the project. Further documentation can be found in academic paper that will be available soon.
-
-This code was created for use at SWIFT.
 
 ## Use Case
 The specific use case that is explored deals with matching a user entry, in this case a bank or company address, against an extensive dictionary that contains all of the possible exact addresses. 
@@ -59,6 +57,8 @@ run companies_dict {path_to companies_dict.tsv} 1 <br/>
 
 Check to make sure the files were uploading by running the jupyter notebook- "DICTIONARY_ANNOTATOR.ipynb" in the DictionaryAnnotator folder.
 
+Note- if you have trouble importing sodaclient when you run the code, make sure that package is located in the site packages folder in anaconda.
+
 ### 4. Configure Solr 
 Navigate to http://localhost:8984/solr/. This should be up and running if the Solr installation worked in the previous step. From here, create a core called "new_core" within that admin site. If you run into any problems here, try creating the core via commandline, using the command "bin/solr create -c new_core". This reference can be used for more help https://lucene.apache.org/solr/guide/6_6/solr-cores-and-solr-xml.html. 
 
@@ -74,4 +74,4 @@ https://github.com/OpenSextant/SolrTextTagger <br/>
 https://dedupe.io/ <br/>
 http://flask.pocoo.org/docs/1.0/ <br/>
 https://getbootstrap.com/ <br/>
-More help and inspiration came from experts within SWIFT
+More help and inspiration came from experts at SWIFT
